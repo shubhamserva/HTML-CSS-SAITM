@@ -1,0 +1,21 @@
+label{
+    color: rgb(238, 238, 36); 
+}
+
+#password2{
+    color: violet !important;
+    font-size: 20px;
+}
+
+#checkbox{
+    color: aquamarine !important;
+}
+.redcolor{
+  color: red !important;  
+  font-family: 'cursive';
+  font-size: 24px;
+  background-color: cyan
+}
+.fontType{
+    font-size: 20px;
+}
