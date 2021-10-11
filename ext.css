@@ -2,6 +2,13 @@ label{
     color: rgb(238, 238, 36); 
 }
 
+body{
+    font-size: 20px;
+}
+p{
+    font-size: 1rem;
+}
+
 #password2{
     color: violet !important;
     font-size: 20px;
@@ -10,12 +17,40 @@ label{
 #checkbox{
     color: aquamarine !important;
 }
+
 .redcolor{
   color: red !important;  
   font-family: 'cursive';
-  font-size: 24px;
-  background-color: cyan
+  font-size: 20px;
+  background-color: cyan;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration-line: line-through;
+  text-decoration-color: antiquewhite;
+  text-decoration-style: dashed;
+  margin-top: 30px;
 }
 .fontType{
     font-size: 20px;
+}
+.name{
+    border: black solid;
+    height: 300px;
+    background-image: url("https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/treesearch.gif");
+}
+.ptag{
+    background: tomato;
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 300px;
+    border: #d71010;
+    border-style: solid;    
+    width: 300px;
+    background-image: url(logo.png);
+
+}
+.image1{
+    background-image: url(logo.png);
+    height: 300px;
+    width: 50%;
 }
