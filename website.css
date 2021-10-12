@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.bg{
+    position: absolute;
+    background-image: url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#headerID{
+    text-align: center;
+}
+#headerID h1{
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+#headerID p{
+    color: violet ;
+}
+.btn{
+    background: #333;
+    border: 1px solid #666;
+    padding: 1em;
+}
+.btn:hover{
+    background:#fff;
+    color: #333;
+    cursor: progress;
+}
+
