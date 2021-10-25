@@ -1,145 +1,139 @@
 body{
-    margin: 0;
-    background: #333;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    text-align: center;
-    line-height: 1.5;
+    background-image: url(./topography.svg), linear-gradient(
+110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    background-attachment: fixed;
+    letter-spacing: -1px;
 }
-h2{
-    margin: 0;
-    padding: 1em;
+
+h3{
+    margin: 0 0 5px 0;
 }
-p{
-    margin: 0;
-    padding: 1em;
+button{
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 30px;
 }
+
 img{
-    display: block;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 300px;
 }
-
-
-.bg{
-    position: absolute;
-    background-image: url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    width: 100%;
-    z-index: -2;
-    opacity: 0.5;
-}
-
-#headerID{
-    text-align: center;
-    min-height: 450px;
-    color: #fff;
-}
-#headerID h1{
-    padding-top: 100px;
-    padding-bottom: 0;
-}
-#headerID p{
-    color: violet ;
-
-} 
-
-.btn{
-    background: #333;
-    border: 1px solid #666;
-    padding: 1em;
-}
-.btn:hover{
-    background:#fff;
-    color: #333;
-    cursor: pointer;
-}
-
-#section-a{
-    background: #eaeaea;
-    color: #333;
-    padding-bottom: 2em;
-}
-
-
-#section-b{
+.wrapper{
     display: grid;
-    padding: 2em;
+    grid-gap: 20px;
 }
 
-#section-b ul{
-    list-style: none;
-    margin: 0;
+#menu-list{
+    display: grid;
+    grid-gap: 10px;
     padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu li{
+    background: rgb(253, 253, 88);
+    display: block;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.top{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "hero hero cta1"
+        "hero hero cta2";
+
+}
+.hero{
+    grid-area: hero;
+    min-height: 300px;
+    max-width: 700px;
+    background: white url("https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.cta{
+    background: yellow;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    border-radius: 20px;
 }
 
-#section-b li{
-    background: #fff;
-    color: #333;
-    width: 31%;
-    margin-bottom: 1em;
-    }
-
-#section-c {
-    background-color: #fff;
-    color: #333;
-    padding: 0 2em 0 2em;
+.hero > * {
+    background: yellow;
+    padding: 5px;
 }
 
-#section-d{
-    display: flex;
-}
-#section-d .box{
-    padding: 1em;
-}
-
-#section-d .box:first-child{
-    background: skyblue;
+.features{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-#footer{
-    background: black;
-    color: #fff;
-    display: flex;
-    padding: 2em;
+.feature{
+    background: white;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+    border-radius: 20px;
 }
 
-#footer div:last-child{
-    margin-left: auto;
+.feature p{
+    color: rgba(163, 88, 88, 0.5);
+}
+.feature .icon{
+    font-size: 50px;
 }
 
-@media only screen and (max-width: 600px){
-    #section-b ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: block;
-        justify-content: space-around;
-    }
+.about{
+    background: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+    border-radius: 20px;
+}
 
-    #section-b li{
-        background: #fff;
-        color: #333;
-        width: 100%;
-        margin-bottom: 1em;
-        }
+.gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 
-        #section-d{
-            display: block;
-        }
-        #footer{
-            background: black;
-            color: #fff;
-            display: block;
-            padding: 2em;
-        }
-        #footer div:last-child{
-            margin-top: 2em;
-        }
+/* repeat(number of columns/rows, the column width we want); */
+
+.gallery h2{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.gallery h2::before, .gallery h2::after{
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient( 45deg, #fef71a, transparent);
+}
+.gallery img{
+    border-radius: 25px;
 }

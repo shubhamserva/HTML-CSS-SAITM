@@ -1,0 +1,78 @@
+<head>
+    <style>
+        .wrapper{
+            display: grid;
+            gap: 10px;
+            background: violet  ;
+            grid-template-columns: repeat(3,minmax(100px));
+        }
+        .wrapper div{
+            background: salmon;
+        }
+        .one{
+            grid-column: 1/span 2;
+        }
+        .five{
+            grid-column: 1/ span 2;
+        }
+        .six{
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        .two{
+            grid-area: 2/ 1 /5 /4;
+        }
+
+        .wrapper1{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(minmax(px, auto)) ;
+            grid-template-areas: 'a b c'
+                                'd e f';
+        }
+        .wrapper1 div{
+            background: yellow;
+        }
+        .a{
+            grid-area: a;      
+        }
+        .b{
+            grid-area: b;
+        }
+        .c{
+            grid-area: c;
+        }
+        .d{
+            grid-area: d;
+        }
+        .e{
+            grid-area: e;
+        }
+        .f{
+            grid-area: f;
+        }
+        
+    </style>
+</head>
+
+
+
+<body>
+<div class="wrapper">
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+    <div class="five">Five</div>
+    <div class="six">Six</div>
+  </div>
+
+  <div class="wrapper1">
+    <div class="a">One</div>
+    <div class="b">Two</div>
+    <div class="c">Three</div>
+    <div class="d">Four</div>
+    <div class="e">Five</div>
+    <div class="f">Six</div>
+  </div>
+</body>
