@@ -1,0 +1,90 @@
+<head>
+    <style>
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+
+@keyframes example2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:rgb(45, 182, 97); left:0px; top:0px;}
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes text{
+  from{
+    margin-right: 0
+  }
+  to{
+    margin-left:0
+  }
+}
+p{
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+#animation2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example2;
+  animation-duration: 7s;
+
+  animation-fill-mode: both;
+  /* animation-delay: 3s; */
+  /* animation-timing-function: e; */
+  animation-iteration-count: 1;
+  /* animation-direction: reverse; */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+}
+
+#animate{
+  animation-name: text;
+  position: relative;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div style="width: 600px; height: 300px;" id="animation">
+        <p >Animation text</p>
+      </div>
+    
+      <div  id="animation2">
+        <p >Animation timing function</p>
+      </div>
+    
+      <p>The Caterpillar and Alice looked at each other for some time in silence:
+        at last the Caterpillar took the hookah out of its mouth, and addressed
+        her in a languid, sleepy voice.</p>
+    
+</body>

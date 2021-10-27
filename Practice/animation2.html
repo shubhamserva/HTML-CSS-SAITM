@@ -1,0 +1,93 @@
+<head>
+    <style>
+        @keyframes style1 {
+            from {
+                background-color: tomato;
+            }
+
+            to {
+                background-color: violet;
+            }
+        }
+
+        @keyframes style2 {
+            from{
+                margin-left: 100%;
+                width: 300%;
+            }
+            to{
+                margin-left: 0%;
+
+            }
+        }
+
+        @keyframes style3{
+            0%{background-color:red; left:0px; top:0px;}
+            25%{background-color:yellow;  left:400px; top:200px;}
+            50%{background-color:rgb(33, 71, 77);  left:400px; top:200px;}
+            75%{background-color:rgb(211, 50, 163); left:0px; top:200px;}
+            100%{background-color:rgb(245, 245, 227); left:0px; top:0px;}
+        }
+
+        @keyframes photoAnimation{
+            0% {background-image: url(./logo.png);}
+            10%{background-image: url(./topography.svg);}
+        }
+
+
+        #animation {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            animation-name: style1;
+            animation-duration: 2s;
+        }
+        #animation2{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: aquamarine;
+            animation: style2;
+            animation-duration: 2s;
+            animation-iteration-count: 5;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+
+        #animation3{
+            width: 100px;
+            height: 100px;
+            animation-name: style3;
+            animation-duration: 5s;
+            position: relative;
+            animation-iteration-count: 3;
+            animation-fill-mode: forwards;
+        }
+
+        #animation1{
+            animation-name: photoAnimation;
+           
+            animation-duration: 50;
+            animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+
+
+
+
+
+<body>
+
+
+    <div  id="animation2">
+        <p >Random text</p>
+      </div>
+
+
+      <div id="animation3">
+        <p>% timing</p>
+      </div>
+
+
+</body>
